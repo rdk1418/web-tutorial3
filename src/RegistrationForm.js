@@ -33,6 +33,13 @@ const RegistrationForm = () => {
       setShowToaster(true);
       console.log('Form submitted successfully:', formData);
       navigate('/profile', { state: { formData: formData } }); // Redirecting to Profile page
+    }else {
+      let errorMessage = "Please fix the following errors:\n";
+      Object.values(errors).forEach(error => {
+        errorMessage += `- ${error}\n`;
+      });
+      setToasterMessage(errorMessage);
+      setShowToaster(true);
     }
   };
 
