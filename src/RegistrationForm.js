@@ -61,7 +61,7 @@ const RegistrationForm = () => {
   return (
     <div className="form-container">
       <h1 className="form-title">Registration Form</h1>
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form" noValidate>
         <div className="form-group">
           <input
             type="text"
